@@ -18,3 +18,7 @@ html.dark article img { background: #f7f5ef; border-radius: 8px; padding: 8px; }
 html:not(.dark) article a[href] { color: #a04e10 !important; }
 html.dark article a[href] { color: var(--ember) !important; }
 html:not(.dark) .myst-outline, html:not(.dark) .myst-outline * , html:not(.dark) nav[aria-label="Document Outline"] { background-color: transparent; }
+
+/* No colour fade on load: in dark mode it showed as a white flash before turning black */
+body { transition: none !important; }
+html.dark body { background: #1c1917; }
