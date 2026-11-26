@@ -1,0 +1,20 @@
+/* Same palette and type as brianjalaian.com: ivory paper, warm ink, one amber accent. */
+@font-face { font-family: 'Fraunces'; src: url('/llm/static/fonts/Fraunces.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Geist'; src: url('/llm/static/fonts/Geist.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Geist Mono'; src: url('/llm/static/fonts/GeistMono.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+:root { --paper: #f7f5ef; --ink: #181811; --line: #dcd8cc; --ember: #bf6018; }
+html:not(.dark) body { background: var(--paper); color: var(--ink); }
+html:not(.dark) .myst-top-nav { background: var(--paper); }
+body { font-family: Geist, system-ui, sans-serif; }
+h1, h2, h3, h4 { font-family: Fraunces, Georgia, serif !important; font-weight: 400 !important; letter-spacing: -0.02em; text-wrap: balance; }
+code, pre { font-family: 'Geist Mono', ui-monospace, monospace; }
+article a:not([class*="button"]) { text-decoration-color: var(--ember); text-underline-offset: 3px; }
+article a:hover { color: var(--ember); }
+article thead th { text-align: left; font-weight: 500; border-bottom: 2px solid var(--ember); }
+article iframe { border: 1px solid var(--line); border-radius: 8px; }
+html.dark { --line: #2d2f33; --ember: #f3ab35; }
+:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
+html.dark article img { background: #f7f5ef; border-radius: 8px; padding: 8px; }
+html:not(.dark) article a[href] { color: #a04e10 !important; }
+html.dark article a[href] { color: var(--ember) !important; }
+html:not(.dark) .myst-outline, html:not(.dark) .myst-outline * , html:not(.dark) nav[aria-label="Document Outline"] { background-color: transparent; }

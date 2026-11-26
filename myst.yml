@@ -1,0 +1,27 @@
+# MyST (Jupyter Book 2). Published under https://courses.brianjalaian.com/llm/
+# BASE_URL=/llm is set by tools/build.py, so links work under /llm.
+version: 1
+project:
+  title: "Introduction to Large Language Models"
+  description: "An eight-week, hands-on introduction to how large language models work, for people who know basic Python."
+  authors:
+    - name: Dr. Brian Jalaian
+  exclude:
+    - '[A-Z]*.md'
+    - _build/**
+    - slides/**
+    - tools/**
+  toc:
+    - file: index.md
+    # Keep this list flat: a folding group breaks page loading when the site lives under /llm.
+    - file: week-1/index.md
+      title: "Week 1: Text to vectors"
+    - file: week-1/notebook.ipynb
+      title: "Week 1 notebook"
+site:
+  template: book-theme
+  options:
+    folders: true          # addresses follow folders: /llm/week-1/notebook/
+    favicon: assets/favicon.png
+    logo_text: "Introduction to LLMs"
+    style: assets/course.css

@@ -1,0 +1,10 @@
+{
+  // Own Worker, separate from CAP 6606. Not deployed yet. _site/ holds an llm/ folder, so addresses match.
+  "name": "intro-llms",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./_site" },
+  "routes": [
+    { "pattern": "courses.brianjalaian.com/llm", "zone_name": "brianjalaian.com" },
+    { "pattern": "courses.brianjalaian.com/llm/*", "zone_name": "brianjalaian.com" }
+  ]
+}

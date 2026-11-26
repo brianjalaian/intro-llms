@@ -1,0 +1,6 @@
+_build/
+_site/
+.DS_Store
+.ipynb_checkpoints/
+.wrangler/
+CLAUDE.md
