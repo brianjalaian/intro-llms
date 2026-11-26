@@ -17,7 +17,7 @@ for d in ("slides", "static"): shutil.copytree(d, out / d)
 for f in out.rglob("*"):
     if f.suffix in {".html", ".xml", ".txt", ".json"}:
         s = f.read_text(errors="ignore")
-        n = re.sub(r"http://localhost:\d+", LIVE, s).replace(f"{LIVE}/llm/slides/", "/llm/slides/")  # so slide links also work in the local preview
+        n = re.sub(r"http://localhost:\d+", LIVE, s)  # don't rewrite other links here: the HTML and the page data must stay identical or the page flashes (React hydration error)
         if n != s: f.write_text(n)
 # every link inside the course must work
 bad = set()
